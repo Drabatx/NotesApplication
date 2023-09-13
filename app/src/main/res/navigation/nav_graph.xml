@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/ListNotestFragment"
         android:name="com.example.notesapplication.view.ListNotesFragment"
-        android:label="@string/first_fragment_label"
+        android:label="@string/title_list_notes"
         tools:layout="@layout/fragment_list_notes">
 
         <action
@@ -21,7 +21,7 @@
     <fragment
         android:id="@+id/CreateNoteFragment"
         android:name="com.example.notesapplication.view.CreateNoteFragment"
-        android:label="@string/second_fragment_label"
+        android:label="@string/title_add_note"
         tools:layout="@layout/fragment_create_note">
 
         <action
@@ -31,6 +31,6 @@
     <fragment
         android:id="@+id/seeNoteFragment"
         android:name="com.example.notesapplication.view.SeeNoteFragment"
-        android:label="fragment_see_note"
+        android:label="@string/title_see_note"
         tools:layout="@layout/fragment_see_note" />
 </navigation>
