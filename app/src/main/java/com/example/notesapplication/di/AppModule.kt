@@ -4,7 +4,6 @@ import android.content.Context
 import androidx.room.Room
 import com.example.notesapplication.model.AppDatabase
 import com.example.notesapplication.model.NoteDao
-import com.example.notesapplication.model.NoteRepository
 import com.example.notesapplication.viewmodel.NotesViewModel
 import dagger.Module
 import dagger.Provides
@@ -31,12 +30,6 @@ object AppModule {
     @Singleton
     fun provideNoteDao(appDatabase: AppDatabase): NoteDao {
         return appDatabase.noteDao()
-    }
-
-    @Provides
-    @Singleton
-    fun provideNoteRepository(noteDao: NoteDao): NoteRepository {
-        return NoteRepository(noteDao)
     }
 
     @Provides
