@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/ListNotestFragment">
+
+    <fragment
+        android:id="@+id/ListNotestFragment"
+        android:name="com.example.notesapplication.view.ListNotesFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_list_notes">
+
+        <action
+            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            app:destination="@id/CreateNoteFragment" />
+        <action
+            android:id="@+id/action_ListNotestFragment_to_seeNoteFragment"
+            app:destination="@id/seeNoteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/CreateNoteFragment"
+        android:name="com.example.notesapplication.view.CreateNoteFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_create_note">
+
+        <action
+            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/ListNotestFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/seeNoteFragment"
+        android:name="com.example.notesapplication.view.SeeNoteFragment"
+        android:label="fragment_see_note"
+        tools:layout="@layout/fragment_see_note" />
+</navigation>
